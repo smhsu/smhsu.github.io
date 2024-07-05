@@ -1,0 +1,14 @@
+---
+interface Props {
+	href: string;
+	className?: string;
+	additionalActiveClasses?: string
+}
+
+const { href, className, additionalActiveClasses } = Astro.props;
+const isLinkToCurrentPage = href === Astro.url.pathname;
+const resolvedHref = isLinkToCurrentPage ? "." : href;
+const activeCss = `text-blue-600 font-bold ${additionalActiveClasses || ""} `;
+const resolvedCss = (isLinkToCurrentPage ? activeCss : "") + (className || "");
+---
+<a href={resolvedHref} class={resolvedCss}><slot /></a>

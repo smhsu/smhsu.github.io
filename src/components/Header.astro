@@ -1,0 +1,50 @@
+---
+import NavLink from "./NavLink.astro";
+const baseUrl = import.meta.env.BASE_URL as string;
+
+const navLinks = [
+	{ href: baseUrl, text: "About Me" },
+	{ href: baseUrl + "publications", text: "Publications" },
+	{ href: baseUrl + "teaching", text: "Teaching" },
+	{ href: baseUrl + "cv", text: "CV" },
+	{ href: baseUrl + "personal", text: "Personal" },
+]
+---
+<header>
+	<div class={"container max-w-screen-xl mx-auto border-b-2 px-4 py-2 flex items-center justify-between " +
+		"md:mt-8 md:border-t-2 md:py-0 md:justify-start"}
+	>
+		<a href={baseUrl} class="text-3xl pr-12" title="Go Home">Silas Hsu</a>
+		<nav class="hidden md:block">
+			<ul class="flex gap-6 italic">
+				{navLinks.map( ({href, text}) =>
+					<li>
+						<NavLink
+							href={href}
+							className="h-16 flex items-center"
+							additionalActiveClasses="border-b-4 pt-1 border-blue-600"
+						>
+							{text}
+						</NavLink>
+					</li>
+				)}
+			</ul>
+		</nav>
+
+		<!--Mobile navigation opener-->
+		<button class="md:hidden p-3 border rounded border-slate-500">
+			<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+				<title>Toggle site navigation</title>
+				<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+			</svg>
+		</button>
+	</div>
+
+	<nav> <!--Mobile navigation menu-->
+		<ul class="px-4 pt-2">
+			{navLinks.map( ({href, text}) =>
+				<li><NavLink href={href} className="h-12 flex items-center">{text}</NavLink></li>
+			)}
+		</ul>
+	</nav>
+</header>
