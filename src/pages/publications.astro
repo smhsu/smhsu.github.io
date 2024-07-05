@@ -1,8 +1,54 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import type Publication from "../Publication";
+import publications from "../publications.json";
+import Citation from "../components/Citation.astro";
+
+const hciPubs: Publication[] = [];
+const bioPubs: Publication[] = [];
+const otherPubs: Publication[] = [];
+
+const pubs: Publication[] = publications;
+for (const pub of pubs) {
+	if (pub.topic === "hci") {
+		hciPubs.push(pub);
+	} else if (pub.topic === "bio") {
+		bioPubs.push(pub);
+	} else {
+		otherPubs.push(pub);
+	}
+}
 ---
-<Layout title="Publications">
-    <main>
-        Publications
-    </main>
+<Layout title="Silas Hsu -- Publications">
+	<main class="p-4 text-sm">
+		<p class="mb-4">
+			This is a selected list of publications.  For a full list, please visit
+			<a href="https://scholar.google.com/citations?user=y58a-6gAAAAJ&hl=en" target="_blank">
+			my Google Scholar profile</a>.
+		</p>
+
+		<h1>Publications in HCI</h1>
+		<ul>
+			{hciPubs.map(pub => <li><Citation publication={pub} /></li>)}
+		</ul>
+
+		<h1>Publications in Bioinformatics</h1>
+		<ul>
+			{bioPubs.map(pub => <li><Citation publication={pub} /></li>)}
+		</ul>
+	</main>
 </Layout>
+<style>
+	a {
+		@apply text-blue-600;
+	}
+	li {
+		@apply mb-4;
+	}
+	h1 {
+		@apply text-xl mb-2;
+	}
+	ul {
+		@apply mb-8 ml-2;
+	}
+</style>

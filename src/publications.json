@@ -1,0 +1,54 @@
+[
+  {
+    "authors": "Silas Hsu and Karrie Karahalios",
+    "year": 2024,
+    "title": "Choosing What You Want Versus Getting What You Want: An Experiment with Choice in Video Ad Placement",
+    "journal": "CHI '24",
+    "url": "https://doi.org/10.1145/3613904.3642869",
+    "topic": "hci",
+    "pdfName": "youtube_ads.pdf"
+  },
+  {
+    "authors": "Tiffany Wenting Li and Silas Hsu (co-first authors), Max Fowler, Zhilin Zhang, Craig Zilles, and Karrie Karahalios",
+    "year": 2023,
+    "title": "Am I Wrong, or is the Autograder Wrong? Effects of AI Grading Mistakes and Error Rate Perception on Learning",
+    "journal": "ICER '23",
+    "url": "https://dl.acm.org/doi/abs/10.1145/3568813.3600124",
+    "topic": "hci",
+    "pdfName": "ai_mistakes.pdf"
+  },
+  {
+    "authors": "Silas Hsu and Tiffany Wenting Li (co-first authors), Zhilin Zhang, Max Fowler, Craig Zilles, and Karrie Karahalios",
+    "year": 2021,
+    "title": "Attitudes Surrounding an Imperfect AI Autograder",
+    "journal": "CHI '21",
+    "url": "https://doi.org/10.1145/3411764.3445424",
+    "topic": "hci",
+    "pdfName": "ai_attitudes.pdf"
+  },
+  {
+    "authors": "Silas Hsu, Kristen Vaccaro, Yin Yue, Aimee Rickman, and Karrie Karahalios",
+    "year": 2020,
+    "title": "Awareness, Navigation, and Use of Feed Control Settings Online",
+    "journal": "CHI '20",
+    "url": "https://doi.org/10.1145/3313831.3376583",
+    "topic": "hci",
+    "pdfName": "fb_settings.pdf"
+  },
+  {
+    "authors": "Zubair Lalani, Gillian Chu, Silas Hsu, Shaw Kagawa, Michael Xiang, Simone Zaccaria, and Mohammed El-Kebir",
+    "year": 2022,
+    "title": "CNAViz: An Interactive Webtool for User-Guided Segmentation of Tumor DNA Sequencing Data",
+    "journal": "PLoS Computational Biology (2022)",
+    "url": "https://doi.org/10.1371/journal.pcbi.1010614",
+    "topic": "bio"
+  },
+  {
+    "authors": "Daofeng Li and Silas Hsu (co-first authors), Deepak Purushotham, Renee L Sears, and Ting Wang",
+    "year": 2019,
+    "title": "WashU Epigenome Browser Update 2019",
+    "journal": "Nucleic Acids Research (2019)",
+    "url": "https://doi.org/10.1093/nar/gkz348",
+    "topic": "bio"
+  }
+]

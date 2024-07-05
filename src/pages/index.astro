@@ -1,10 +1,39 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import silasPic from "../img/silas.jpg";
 ---
 
 <Layout title="Silas Hsu">
-	<main>
-		Main content
-		<a href="." class="hover:decoration-solid">asdf</a>
+	<main class="pt-8 md:flex gap-4">
+		<div class="bg-slate-100 p-4 mb-8 flex flex-row md:flex-col gap-8 items-center md:items-start md:w-64 md:flex-none">
+			<Image src={silasPic} alt="Silas Hsu" class="w-32 sm:w-56" style="border-radius: 50%" />
+			<div>
+				<p class="mb-4"><b>Silas Hsu</b></p>
+				<p>PhD Student</p>
+				<p class="mb-4">University of Illinois at Urbana-Champaign</p>
+				<p>Email: silash2 [at] illinois.edu</p>
+				<a href="https://github.com/smhsu" target="_blank" class="text-blue-600">GitHub</a>
+			</div>
+		</div>
+		<div class="p-4 md:mt-12">
+			<h1 class="text-4xl font-bold mb-6">Hello!</h1>
+			<p class="mb-4">
+				I’m a 6th year PhD candidate in Computer Science at the University of Illinois at
+				Urbana-Champaign.  In Fall 2024 I will start as an Assistant Professor of Computer Science at California
+				Polytechnic State University, San Luis Obispo.
+			</p>
+			<p class="mb-4">
+				I work in <b>Human-Computer Interaction</b>, especially (1) AI content curation
+				systems (e.g. Facebook News Feed) and (2) AI feedback systems in education.  My research considers how
+				these systems erode users' autonomy (e.g. how the systems fail to consider users' wishes with dignity),
+				and examines what interface design decisions and regulations help resolve these issues.
+			</p>
+			<p class="mb-4">
+				While I most often work on the interface design of AI systems, I'm also interested in and have done work
+				in music education software and visualization tools for biologists.  Please contact me if you want
+				to work with me in any of these areas!
+			</p>
+		</div>
 	</main>
 </Layout>
