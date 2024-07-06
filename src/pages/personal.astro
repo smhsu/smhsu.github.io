@@ -3,5 +3,31 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Silas Hsu -- Personal">
-	Insert personal info here.
+	<main class="p-4">
+		<p>My hobbies include:</p>
+		<ul class="list-disc ml-6 mb-8">
+			<li>
+				Playing classical music on the piano.  I've been learning piano for over 20 years now, and it's where I
+				got my interest in music education technology.
+			</li>
+			<li>
+				Playing thinking or strategy games, such as Dominion or XCOM.
+			</li>
+			<li>
+				Rock climbing!
+			</li>
+		</ul>
+
+		<div class="flex justify-center">
+			<iframe class="w-full max-w-screen-md h-auto aspect-video" width="750" height="422" src="https://www.youtube.com/embed/B3btxNcT8L8" title="Liszt - Hungarian Rhapsody No. 11" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+	</main>
 </Layout>
+<style>
+	.responsive-iframe {
+		width: 100%;
+		max-width: 750px;
+		height: auto;
+		aspect-ratio: 16/9;
+	}
+</style>
