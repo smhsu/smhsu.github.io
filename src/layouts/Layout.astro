@@ -6,17 +6,22 @@ interface Props {
 
 const title = Astro.props.title;
 ---
-
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Homepage of Silas Hsu, a researcher in HCI." />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="theme-color" content="#ffffff">
+
+		<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+		<link rel="mask-icon" href="favicon.svg" color="#000000">
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
