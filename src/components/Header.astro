@@ -32,7 +32,7 @@ const navLinks = [
 		</nav>
 
 		<!--Mobile navigation opener-->
-		<button class="md:hidden p-3 border rounded border-slate-500">
+		<button id="nav-menu-opener" class="md:hidden p-3 border rounded border-slate-500">
 			<svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 				<title>Toggle site navigation</title>
 				<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
@@ -40,11 +40,26 @@ const navLinks = [
 		</button>
 	</div>
 
-	<nav class="hidden"> <!--Mobile navigation menu-->
-		<ul class="px-4 pt-2">
+	<nav id="mobile-nav-menu" class="hidden md:hidden border-b border-slate-200"> <!--Mobile navigation menu-->
+		<ul class="px-4 py-2">
 			{navLinks.map( ({href, text}) =>
 				<li><NavLink href={href} className="h-12 flex items-center">{text}</NavLink></li>
 			)}
 		</ul>
 	</nav>
+
+	<script>
+		document.getElementById("nav-menu-opener")?.addEventListener("click", () => {
+			document.getElementById("mobile-nav-menu")?.classList.toggle("hidden");
+		});
+	</script>
+
+	<style>
+		#nav-menu-opener:hover {
+			@apply bg-slate-100;
+		}
+		#nav-menu-opener:active {
+			@apply bg-slate-200;
+		}
+	</style>
 </header>
