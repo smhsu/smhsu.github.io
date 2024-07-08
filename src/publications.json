@@ -6,7 +6,7 @@
     "journal": "CHI '24",
     "url": "https://doi.org/10.1145/3613904.3642869",
     "topic": "hci",
-    "pdfName": "youtube_ads.pdf"
+    "pdfPath": "pubs/youtube_ads.pdf"
   },
   {
     "authors": "Tiffany Wenting Li and Silas Hsu (co-first authors), Max Fowler, Zhilin Zhang, Craig Zilles, and Karrie Karahalios",
@@ -15,7 +15,7 @@
     "journal": "ICER '23",
     "url": "https://dl.acm.org/doi/abs/10.1145/3568813.3600124",
     "topic": "hci",
-    "pdfName": "ai_mistakes.pdf"
+    "pdfPath": "pubs/ai_mistakes.pdf"
   },
   {
     "authors": "Silas Hsu and Tiffany Wenting Li (co-first authors), Zhilin Zhang, Max Fowler, Craig Zilles, and Karrie Karahalios",
@@ -24,7 +24,7 @@
     "journal": "CHI '21",
     "url": "https://doi.org/10.1145/3411764.3445424",
     "topic": "hci",
-    "pdfName": "ai_attitudes.pdf"
+    "pdfPath": "pubs/ai_attitudes.pdf"
   },
   {
     "authors": "Silas Hsu, Kristen Vaccaro, Yin Yue, Aimee Rickman, and Karrie Karahalios",
@@ -33,7 +33,7 @@
     "journal": "CHI '20",
     "url": "https://doi.org/10.1145/3313831.3376583",
     "topic": "hci",
-    "pdfName": "fb_settings.pdf"
+    "pdfPath": "pubs/fb_settings.pdf"
   },
   {
     "authors": "Zubair Lalani, Gillian Chu, Silas Hsu, Shaw Kagawa, Michael Xiang, Simone Zaccaria, and Mohammed El-Kebir",

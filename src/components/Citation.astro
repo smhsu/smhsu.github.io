@@ -5,7 +5,7 @@ interface Props {
 	publication: Publication;
 }
 
-const publicationsBasePath: string = import.meta.env.BASE_URL + (import.meta.env.PUBLICATIONS_DIR || "");
+const publicationsBasePath: string = import.meta.env.BASE_URL;
 const pub = Astro.props.publication;
 ---
 <p class="font-bold">{pub.title}</p>
@@ -14,7 +14,7 @@ const pub = Astro.props.publication;
 {pub.note && <p>{pub.note}</p>}
 <div class="flex gap-1">
 	{pub.url && <a href={pub.url} target="_blank">[Publisher site]</a>}
-	{pub.pdfName && <a href={publicationsBasePath + pub.pdfName} target="_blank">[PDF]</a>}
+	{pub.pdfPath && <a href={publicationsBasePath + pub.pdfPath} target="_blank">[PDF]</a>}
 </div>
 
 <style>

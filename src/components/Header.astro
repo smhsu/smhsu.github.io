@@ -4,10 +4,10 @@ const baseUrl = import.meta.env.BASE_URL as string;
 
 const navLinks = [
 	{ href: baseUrl, text: "About Me" },
-	{ href: baseUrl + "publications", text: "Publications" },
+	{ href: baseUrl + "publications/", text: "Publications" },
 	//{ href: baseUrl + "teaching", text: "Teaching" },
-	{ href: baseUrl + "cv", text: "CV" },
-	{ href: baseUrl + "personal", text: "Personal" },
+	{ href: baseUrl + "cv/", text: "CV" },
+	{ href: baseUrl + "personal/", text: "Personal" },
 ]
 ---
 <header>
@@ -49,9 +49,21 @@ const navLinks = [
 	</nav>
 
 	<script>
-		document.getElementById("nav-menu-opener")?.addEventListener("click", () => {
+		function toggleMobileMenu() {
 			document.getElementById("mobile-nav-menu")?.classList.toggle("hidden");
-		});
+		}
+
+		// Have the opener button toggle the menu
+		document.getElementById("nav-menu-opener")?.addEventListener("click", toggleMobileMenu);
+
+		// For links inside the menu that lead to "#", make them close the menu as well.
+		for (const link of document.querySelectorAll("#mobile-nav-menu a")) {
+			link.addEventListener("click", () => {
+				if (link.getAttribute("href") === "#") {
+					toggleMobileMenu();
+				}
+			});
+		}
 	</script>
 
 	<style>

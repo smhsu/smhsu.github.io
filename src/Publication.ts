@@ -6,5 +6,5 @@ export default interface Publication {
 	url: string;
 	topic: string;
 	note?: string;
-	pdfName?: string;
+	pdfPath?: string;
 }
