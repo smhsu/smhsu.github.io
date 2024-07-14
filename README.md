@@ -17,9 +17,13 @@ not show up.  To change this behavior, edit the code for the Publications page.
 Note the PDF paths in the publications JSON file are relative to the root of the `public` directory.
 
 ## Deployment
-Before deployment, don't forget to run `npm run preview`, as some bugs might sneak in during the build!
+Before deployment, don't forget to run `npm run build` followed by `npm run preview`, as bugs might sneak in during
+the build process!
 
-To deploy to github pages, visit your repository's Settings --> Pages.  Select GitHub Actions as
+Edit `astro.config.mjs`, especially the `site` and `base` variables, to fit your needs.  See [Astro docs](https://docs.astro.build/en/reference/configuration-reference/)
+for more information on configuration.
+
+To deploy to GitHub pages, visit your repository's Settings --> Pages.  Select GitHub Actions as
 your build and deployment method.  Then select Astro from the list of predefined workflows.
 
 Note that if you use environment variables, they are not committed into the git repo by default.  Therefore you should
