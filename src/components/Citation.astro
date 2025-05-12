@@ -10,8 +10,10 @@ const pub = Astro.props.publication;
 ---
 <p class="font-bold">{pub.title}</p>
 <p>{pub.authors}</p>
-<p class="italic">In {pub.journal}</p>
-{pub.note && <p>{pub.note}</p>}
+<p>
+	<span class="italic">In {pub.journal}</span>
+	{pub.award && <span>- <strong>{pub.award}</strong></span>}
+</p>
 <div class="flex gap-1">
 	{pub.url && <a href={pub.url} target="_blank">[Publisher site]</a>}
 	{pub.pdfPath && <a href={publicationsBasePath + pub.pdfPath} target="_blank">[PDF]</a>}

@@ -5,6 +5,6 @@ export default interface Publication {
 	journal: string;
 	url: string;
 	topic: string;
-	note?: string;
+	award?: string;
 	pdfPath?: string;
 }
